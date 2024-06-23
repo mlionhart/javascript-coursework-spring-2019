@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Length</title>
+</head>
+<body>
+	<form method="POST" action="">
+		<label for="firstName">First Name</label>
+		<input type="text" id="firstName" />
+		<p>
+		<input type="submit" id="submit" disabled/>
+	</p>
+	<form>
+
+	The length of first name is: <span id="content"></span>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+		$('#content').html('0');
+		$('#firstName').on('keyup',function(evt){
+			$('#content').html($('#firstName').val().length);
+			if($(this).val().length >= 8){
+				$(this).css({background:'red'});
+			} else {
+				$(this).css({background:'white'});
+			}
+
+			if($(this).val().length >= 4 && $(this).val().length < 8){
+				$('#submit').prop('disabled',false);
+			} else {
+				$('#submit').prop('disabled',true);
+			}
+		});
+	});
+
+	</script>
+</body>
+</html>

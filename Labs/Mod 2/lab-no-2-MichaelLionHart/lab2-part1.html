@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lab2-problem1.css">
+    <title>Lab 2 - Problem 1</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1>Lab 2 - Problem 1</h1>
+                <button type="button" class="btn btn-success" onclick="startThings()">START</button>
+                <div id="output" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Lab 2 - Part 1 JavaScript -->
+<script>
+    function startThings(){
+        let romanNumeral; // do not modify
+        // your code goes here
+        let x = Number(prompt("Enter a number between 1 and 10"));
+
+        if (x === 1) {
+            romanNumeral = 'I';
+        } else if (x === 2) {
+            romanNumeral = 'II';
+        } else if (x === 3) {
+            romanNumeral = 'III';
+        } else if (x === 4) {
+            romanNumeral = 'IV';
+        } else if (x === 5) {
+            romanNumeral = 'V';
+        } else if (x === 6) {
+            romanNumeral = 'VI';
+        } else if (x === 7) {
+            romanNumeral = 'VII';
+        } else if (x === 8) {
+            romanNumeral = 'VIII';
+        } else if (x === 9) {
+            romanNumeral = 'IX';
+        } else if (x === 10) {
+            romanNumeral = 'X';
+        } else {
+            romanNumeral = 'You Fail';
+        }
+        // be sure to assign the roman numeral to the variable romanNumeral
+        // it will be used to display it on the web page using the code below
+
+
+
+        // do not modify start
+        let outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = romanNumeral;
+        // do not modify end
+    }
+</script>
+</body>
+</html>

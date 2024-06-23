@@ -1,0 +1,260 @@
+/* CTEC 122 project styles */
+/* Part 2 Begin */
+body   {font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color:#000000;
+    background-color:#a7a09a;
+    margin:0 auto;
+    padding:0;
+    width:900px;
+    background-color: #DEE7EF;}
+     
+#pagewrapper {background-color:#1E90FF}
+
+header   {background: linear-gradient(#022446, #1B61B0);}
+
+#one {width: 900px;
+  height: 93px;
+  font-size: 64px;
+  font-family: cursive;
+  text-align: center;
+  color: #DEE7EF;
+  text-shadow: 5px 5px 5px #000000}
+
+nav {background-color: #333;
+  text-align: center;
+  padding: 5px 0 5px 0;}
+
+aside {float:left;
+      width:236px;
+      background-color:#DEE7EF;
+      color: #000000;
+      padding:10px;
+      border: 2px solid #333;}
+      
+#content {float:right;
+      width:620px;
+      background-color:#1e90ff;
+      padding:10px;}
+
+#content a {color: #DEE7EF;}
+      
+footer  {clear:both;
+      background-color:#333;
+      padding:5px 10px;
+      color: #DEE7EF;
+      text-align: center;}
+        
+nav ul {margin:0;
+     padding: 10px;
+     list-style:none;}
+     
+footer ul {margin:0;
+        padding: 0px;
+        list-style:none;}
+              
+nav li, footer li  {display:inline;
+                  margin: 0;
+                  padding: 0;}
+
+nav a {padding: 15px 30px;
+    margin: 0;
+    text-decoration: none;
+    color: #DEE7EF;}
+
+footer a {color: #f9974f;
+       margin: 0 7px;}
+
+nav li a:hover {background-color: #F9974F;
+             color: #ffffff;}
+              
+h1 {margin:0;
+text-align: center;}
+
+h2 {margin:.5em 1em;}
+
+footer p {margin:0;
+       text-align: center;}
+
+nav img {margin: 0 .5em 0 .5em;
+      border: 0;}
+
+aside li {padding-bottom: 1em;
+         font-size: .9em;}
+
+#sidebarimage {text-align: center;
+           padding-top: 1em;
+           font-weight: bold;
+           font-size: .9em;
+           border-top: 2px solid black;
+           color: #69260b;}
+
+#guitar1 {float: right;
+      margin: 5px 0 10px 10px;}
+
+#guitar2 {float: left;
+      margin: 5px 10px 10px 0;}
+
+.justify {text-align: justify;}
+
+#copyright {font-size: .75em;
+        padding-top: 1em;}
+
+#guitargirl {margin-right: 7px;}
+
+#upperroman {
+  list-style-type: upper-roman;
+}
+
+#upperroman ul {
+  list-style-type: square;
+}
+
+#upperroman ul li {
+  padding: 1px;
+}
+
+#lessons, #theory, #repair {
+  margin: 0 10px 10px 10px;
+  float: right;
+}
+
+#upperroman ul:last-child {
+  margin-bottom: 70px;
+}
+
+#return {
+  display: block;
+  text-align: center;
+  margin: 305px auto 0 auto;
+}
+
+#return2 {
+  display: block;
+  text-align: center;
+  margin: 223px auto 0 auto;
+}
+
+#servicesheading {
+  padding-bottom: 50px;
+}
+
+label.special {
+  float: left;
+  width: 9.6em;
+}
+
+label.marginleft {
+  margin-left: 50px;
+}
+
+label.smallmargin {
+  margin-left: 10px;
+}
+
+label.smallestmargin {
+  margin-left: 2px;
+}
+
+#buy label {
+  width: 13em;
+}
+
+#buy select {
+  margin-right: 175px;
+  width: 200px;
+}
+
+legend {
+  background-color: #003572;
+  color: #fff;
+  padding: 7px;
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+fieldset {
+  padding: 15px;
+}
+
+#submit {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#submit input {
+  padding: 14px 25px;
+  background-color: #003572;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #333;
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
+
+#submit input:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #000;
+  transition: all 200ms ease-out;
+}
+
+#submit input:active {
+  box-shadow: none;
+}
+
+#testimonials {
+  list-style-type: none;
+  padding: 5px 10px;
+}
+
+#testimonials li {
+  border-bottom: 2px solid black;
+  margin-top: 15px;
+}
+
+#testimonials li:last-child {
+  border-bottom: none;
+}
+
+#orderheading {
+  margin-bottom: .5em;
+}
+
+.aboutcontent {
+  line-height: 1.5;
+  font-style: italic;
+  text-align: justify;
+  padding: 10px;
+}
+
+#aboutimg {
+  display: block;
+  margin: 0 auto;
+}
+
+#mysites img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-top: 5px;
+}
+
+#mysites p {
+  border-top: 2px solid black;
+  margin-top: 15px;
+  padding: 5px 10px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#mysites p:first-child {
+  border-top: none;
+}
+
+#aboutaside h2 {
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: underline;
+}

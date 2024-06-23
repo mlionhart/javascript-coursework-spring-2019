@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cascading Selects</title>
+	<style>
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<h2>Select a Product Category</h2>
+	<select name="categories" id="categories">
+		<option value="-">--Select a Category--</option>
+		<option value="food">Food</option>
+		<option value="beverages">Beverages</option>
+		<option value="cars">Cars</option>
+		<option value="movies">Movies</option>
+	</select>
+	<h2>Select a Product</h2>
+	<select name="products" id="products" disabled>
+		<option>Select Product</option>
+	</select>
+
+	<script>
+		var choices = {
+			food:['Peach Pie','Pizza','Cheezburger'],
+			beverages: ['Coke','Pepsi','RC','Water'],
+			cars: ['Ford','Chevy','Lexus','Toyota'],
+			movies: ['Space Balls','The Song Remains the Same']
+		};
+
+		$('#categories').on('change',function(){
+			// clear out existing li's of products
+			$('#products').empty();
+			// now build list of li's depending on category selected
+			var category = $(this).val();
+			// console.log(category);
+			// console.log(choices[category]);
+			var output = '';
+			if (category !== '-'){
+				for (var i=0;i<choices[category].length;i+=1){
+					// console.log(choices[category][i]);
+					output = output + '<option value="">' + choices[category][i] + '</option>';
+				}
+				$('#products').append(output).show();
+				$('#products').prop("disabled",false);
+			} else {
+				$('#products').empty();
+				$('#products').append('<option>Select Product</option');
+				$('#products').prop("disabled",true);
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cards 1 - 2019</title>
+    <style>
+        img {
+            height: 50%;
+            margin: 25px;
+            border: 2px solid black;
+            border-radius: 8px;
+            box-shadow: 10px 10px 10px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <script>
+        var suits = ['clubs','diamonds','hearts','spades'];
+        var faces = ['ace','2','3','4','5','6','7','8','9','10','jack','queen','king'];
+        var deck = [];
+
+        function PlayingCard(suit,face){
+            this.suit = suit;
+            this.face = face;
+            this.image = face + '_of_' + suit + '.png';
+        }
+
+        for (let suit = 0 ; suit < suits.length ; suit++) {
+            for (let face = 0 ; face < faces.length ; face++) {
+                let card = new PlayingCard(suits[suit], faces[face]);
+                deck.push(card);
+            }
+        }
+
+        for (let index = 0; index < deck.length; index++) {
+            document.write('<img src="img/' + deck[index].image + '">');
+            
+        }
+        
+    </script>
+</body>
+</html>

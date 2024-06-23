@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX Example 2 Using jQuery</title>
+
+
+
+</head>
+<style>
+    p {
+        width: 40%;
+        margin: 50px auto 0;
+        padding: 22px;
+        background-color: #ededed;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 05px;
+        -moz-border-radius: 05px;
+        border-radius: 05px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+    }
+
+    p:first-child {
+        font-size: 32px;
+    }
+
+    p:last-child {
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <h1>AJAX Demo Using jQuery</h1>
+    <button id="request">Send AJAX Request via jQuery</button>
+    <button id="clear">Clear Page</button>
+    <div id="target"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+
+        function processResponse(data) {
+            $('#target').html(data);
+        } // end processResponse function
+
+        $(document).ready(function () {
+
+            $('#request').click(function () {
+                $.get('response.php', '', processResponse);
+            });
+
+            $('#clear').click(function () {
+                $('#target').html('');
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

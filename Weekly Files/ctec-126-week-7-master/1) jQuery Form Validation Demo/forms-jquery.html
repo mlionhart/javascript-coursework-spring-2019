@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>jQuery Form Demo</title>
+</head>
+
+<body>
+
+    <h1>CTEC 126 JavaScript</h1>
+    <h2>jQuery/JavaScript Form Processing</h2>
+
+    <form id="customer" name="customer" action="http://ctec.clark.edu/~belgort/formprocessing/processform.php" method="POST">
+
+        <label for="first">First Name
+            <br>
+            <input type="text" name="first" id="first">
+        </label>
+        <br><br>
+        <label for="last">Last Name
+            <br>
+            <input type="text" name="last" id="last">
+        </label>
+        <br><br>
+        <fieldset id="selectgender">
+            <legend>Gender</legend>
+            <input type="radio" name="sex" value="male" id="male"><label for="male">Male</label>
+            <br>
+            <input type="radio" name="sex" value="female" id="female"><label for="female">Female</label>
+            <br>
+            <input type="radio" name="sex" value="undeclared" id="undeclared"><label for="undeclared">Undeclared</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Contact Method</legend>
+            <input type="checkbox" name="contact[]" value="email" id="email" checked><label for="email">Email</label>
+            <br>
+            <input type="checkbox" name="contact[]" value="phone" id="phone"><label for="phone">Phone</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>State</legend>
+            <label for="state">Select a State</label>
+            <br>
+            <select name="state" id="state">
+                <option value="-">--Select---</option>
+                <option value="New York">New York</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Washington">Washington</option>
+            </select>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <!-- Load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        // logger function
+        // write stuff out to the console
+        function logger(message) {
+            console.log("Logger: ", message);
+        }
+
+        $(document).ready(function () {
+            // bind submit button to an event for the form
+            $('#customer').on('submit',function (evt) {
+
+                var flag = true;
+
+                // check first name field
+                var first = $('#first').val();
+                logger('first = ' + first);
+                if (first === '') {
+                    $('#first').css('border', '2px solid red');
+                    flag = false;
+                }
+
+                // last name
+                // check first name field
+                var last = $('#last').val();
+                logger('last = ' + last);
+                if (last === '') {
+                    $('#last').css('border', '2px solid red');
+                    flag = false;
+                }
+
+                // radio button value
+                var genderFlag = false;
+                $(':radio:checked').each(function () {
+                    genderFlag = true;
+                    logger('One radio button was checked');
+                });
+
+                if (!genderFlag) {
+                    $('#selectgender').css('border', '2px solid red');
+                    flag = false;
+                }
+
+                // check box values
+                email = $('#email').val();
+                logger('email = ' + email);
+
+                // check box values
+                phone = $('#phone').val();
+                logger('phone = ' + phone);
+
+                // select pull down
+                var state = $('#state').val();
+                if (state === '-') {
+                    $('#state').css('border', '2px solid red');
+                    flag = false;
+                }
+                logger('state = ' + state);
+
+                // this will not submit the form
+                // note the parameter in the .ready function
+                // use this to stop the form in it's tracks. That means don't submit it.
+                if (!flag) {
+                    evt.preventDefault();
+                }
+
+            });
+
+            // when you leave the first field do something
+            $('#first:text').blur(function () {
+                logger('you moved from the first field');
+            });
+
+            $('#state').change(function () {
+                logger('State: Something changed');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

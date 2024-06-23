@@ -1,0 +1,21 @@
+/* 
+dom.css for lab6
+*/
+body {
+    width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#myoutput {
+    background-color: #cccccc;
+    padding: 15px;
+}
+
+.herocontent {
+    background-color: #d3d3d3;
+}
+
+.footercontent {
+    background-color: #f7f706;
+}

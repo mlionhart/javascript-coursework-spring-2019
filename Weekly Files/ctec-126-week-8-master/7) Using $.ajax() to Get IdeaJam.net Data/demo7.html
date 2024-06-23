@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reading JSON with $.ajax()</title>
+</head>
+
+<body>
+    <h1>Reading data using AJAX from IdeaJam.net</h1>
+    <h2>CTEC 126 Clark College</h2>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        // http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments
+        // http://api.jquery.com/jquery.getjson/
+
+        $(document).ready(function () {
+            var comments = '<ul>';
+            var ideajam_api = "http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments";
+
+            $.ajax({
+                url: ideajam_api
+            }).done(
+                function (data) {
+                    console.log(data);
+                    for (var i = 0; i < data['result'].length; i++) {
+                        comments = comments + "<li>" + data['result'][i].createdby + " " + data['result'][i].datecreated + ": " + data['result'][i].comment + "</li>";
+                    }
+                    comments = comments + "</ul>";
+                    $('body').append(comments);
+                }).always(function () {
+                    console.log('Always...');
+                }).error(function () {
+                    console.log('Something went wrong!');
+                });
+        }); // end docready
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+/* lab5.css */
+/* Mike Hart */
+
+body {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+section {
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    display: block;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 30%;
+    font-size: large;
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>My Second jQuery Page</title>
+</head>
+<body>
+<h1>This is my second jQuery page!</h1>
+<p>Please let everybody know</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+	// check to see if the dom is ready
+	$(document).ready(function() {
+		console.log('jQuery is working!');
+	});
+	
+	// check to see if the dom is ready and fire a second event
+	$(document).ready(function() {
+		console.log('Well look at that! I can fire off two document ready events. Try that with regular JavaScript');
+	});	
+</script>
+</body>
+</html>

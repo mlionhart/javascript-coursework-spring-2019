@@ -1,0 +1,34 @@
+<button onclick="alert(countElements('html'));">Show number of 'HTML' Elements</button>
+<button onclick="alert(countElements('p'));">Show number of 'p' Elements</button>
+<hr>
+<button onclick="displayElementText('p');">Show contents of 'p' Elements</button>
+<button onclick="displayElementText('a');">Show contents of 'a' Elements</button>
+<hr>
+<button onclick="displayElementAttributes('a','href');">Show 'a' tags 'href' attribute values</button>
+<button onclick="displayElementAttributes('p','class');">Show 'p' tags 'class' attribute value</button>
+<hr>
+<button onclick="displayElementsContentByClassName ('herocontent');">Show elements by class name 'herocontent'</button>
+<button onclick="displayElementsContentByClassName ('footercontent');">Show elements by class name 'footercontent'</button> 
+<hr>
+<button onclick="clearMyOutputDiv ();">Clear the myoutput div</button> 
+<hr>
+<button onclick="myOutput_countElements ('html');">Write out number of 'HTML' elements to myoutput</button> 
+<button onclick="myOutput_countElements ('p');">Write out number of 'p' elements to myoutput</button> 
+<hr>
+<button onclick="myOutput_displayElementText ('p');">Write out content of 'p' elements to myoutput</button> 
+<button onclick="myOutput_displayElementText ('a');">Write out content of 'a' elements to myoutput</button> 
+<hr>
+<button onclick="myOutput_displayElementAttributes('a','href');">Show 'a' tags 'href' attribute values to myouput</button>
+<button onclick="myOutput_displayElementAttributes('p','class');">Show 'p' tags 'class' attribute value to myoutput</button>
+<hr>
+<button onclick="myOutput_displayElementsContentByClassName ('herocontent');">Show elements by class name 'herocontent' in myoutput</button>
+<button onclick="myOutput_displayElementsContentByClassName ('footercontent');">Show elements by class name 'footercontent' in myoutput</button> 
+<hr>
+<button onclick="changeStyle ('herocontent','#ff0000');">Change CSS for class name 'herocontent'</button>
+<button onclick="changeStyle ('footercontent','#ff0000');">Change CSS for class name 'footercontent'</button> 
+<hr>
+<button onclick="hide ('herocontent');">Hide stuff with class of 'herocontent'</button>
+<button onclick="show ('herocontent');">Show stuff with class of 'herocontent'</button>
+<hr>
+<button onclick="hide ('footercontent');">Hide stuff with class of 'footercontent'</button> 
+<button onclick="show ('footercontent');">Show stuff with class of 'footercontent'</button>

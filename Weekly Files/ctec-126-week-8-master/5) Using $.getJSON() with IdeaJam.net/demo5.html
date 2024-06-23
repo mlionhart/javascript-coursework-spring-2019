@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reading JSON</title>
+    <style>
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reading data using Ajax from IdeaJam.net</h1>
+    <h2>CTEC126 Clark College</h2>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        
+        // http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments
+        // http://api.jquery.com/jquery.getjson/
+
+        $(document).ready(function () {
+            var comments = '<ul>';
+            var ideajam_api = "http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments";
+            $.getJSON(ideajam_api, function (data) {
+                ;
+                $.each(data, function (key, val) {
+                    for (var i = 0; i < val.length; i++) {
+                        comments = comments + "<li>" + val[i].createdby + " " + val[i].datecreated + ": " + val[i].comment + "</li>";
+                    };
+                }); // each
+
+                comments = comments + "</ul>";
+                $('body').append(comments);
+
+            }); // end getjson			
+        }); // end docready
+    </script>
+</body>
+
+</html>

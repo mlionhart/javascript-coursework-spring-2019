@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <div id="result" class='format-output'></div> -->
+    <div id="result"></div>
+    <script>
+    
+        // function Apple(type, color) {
+        //     this.type = type;
+        //     this.color = color;
+        //     this.bite = function() {
+        //         alert('Yummy, this ' + this.color + ' is good!');
+        //     };
+        // }
+
+        // var apple1 = new Apple('Red Delicious','Red');
+        // var apple2 = new Apple('Granny Smith', 'Green');
+        // alert(apple1.type);
+        // alert('apple2 is: ' + apple2.color);
+        // console.log(apple1);
+        var count = 0;
+
+        function main() {
+            try {
+                --count;
+                walkThrough();
+            }
+            catch (e) {
+                count++;
+            }
+            finally {
+                count++;
+            }
+        }
+
+        function walkThrough() {
+            try {
+                var obj = {}
+                if (obj)
+                    count++;
+                else {
+                    let test = "This is a testing string";
+                    if (test.indexOf('is') === 2)
+                        count++;
+                    else {
+                        throw new Error('Error');
+                }
+            }
+        }
+        catch (e) {
+            count--;
+        }
+        finally {
+            count++;
+        }
+    }
+
+    main();
+    console.log(`Count: ${count}`);
+        
+    
+    </script>
+</body>
+</html>

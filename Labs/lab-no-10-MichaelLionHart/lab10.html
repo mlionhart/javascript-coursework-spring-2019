@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/dom.css">
+    <title>Lab No. 10</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome to RoboCoach</h1>
+        <h2>Your #1 stop for Robot Life Coaches!</h2>
+        <div id="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Order</li>
+            </ul>
+        </div> <!-- end of nav -->
+        <hr>
+    </div> <!-- end of header -->
+
+    <div id="content">
+        <p id="para1" class="herocontent">Robots are more and more starting to become 
+            involved in our everyday lives.  From household tasks, like vacuuming, to 
+            the sophisticated <a href="https://en.wikipedia.org/wiki/Industrial_robot" 
+            title="Industrial Robots">industrial bots</a> that assemble our cars for us.  
+            But, did you ever think you could have your <strong><em>own</em></strong> 
+            robot life coach?</p>
+        <p id="para2" class="herocontent">RoboCoach has pioneered the idea of replacing 
+            that snarky <a href="https://en.wikipedia.org/wiki/Coaching#Life" title="Life Coach">
+            human life coach</a> that you’re used to, with a more consistent, 
+            subservient, mechanical version!  Never again will you need to deal with 
+            imperfect, morally flawed and corrupt humans to receive the affirmations 
+            and motivation you need to conquer this puny world.</p>
+        <p id="para3" class="herocontent">Think I’m joking?  Order one of our 
+            <a href="https://www.redbull.com/int-en/world-championships-crappy-robots" 
+            title="Crappy Robots">crappy robots</a> today, and we guarantee you will 
+            receive it through the mail within 3 months after you expect to receive it! 
+            (Note, no returns before three months after ordering).  So, don’t wait now, 
+            order your own RoboCoach unit today!</p>
+    </div> <!-- end of content -->
+
+    <div id="footer">
+        <p class="footercontent">&copy; 2019 RoboCoach Corporations<span style="font-size:small;">&trade;</span></p>
+    </div> <!-- end of footer -->
+
+    <div id="mybuttons">
+        <button onclick="alert(countElements('html'));">Show number of 'HTML' Elements</button>
+        <button onclick="alert(countElements('p'));">Show number of 'p' Elements</button>
+        <hr>
+        <button onclick="displayElementText('p');">Show contents of 'p' Elements</button>
+        <button onclick="displayElementText('a');">Show contents of 'a' Elements</button>
+        <hr>
+        <button onclick="displayElementAttributes('a','href');">Show 'a' tags 'href' attribute values</button>
+        <button onclick="displayElementAttributes('p','class');">Show 'p' tags 'class' attribute value</button>
+        <hr>
+        <button onclick="displayElementsContentByClassName ('herocontent');">Show elements by class name 'herocontent'</button>
+        <button onclick="displayElementsContentByClassName ('footercontent');">Show elements by class name 'footercontent'</button> 
+        <hr>
+        <button onclick="clearMyOutputDiv ();">Clear the myoutput div</button> 
+        <hr>
+        <button onclick="myOutput_countElements ('html');">Write out number of 'HTML' elements to myoutput</button> 
+        <button onclick="myOutput_countElements ('p');">Write out number of 'p' elements to myoutput</button> 
+        <hr>
+        <button onclick="myOutput_displayElementText ('p');">Write out content of 'p' elements to myoutput</button> 
+        <button onclick="myOutput_displayElementText ('a');">Write out content of 'a' elements to myoutput</button> 
+        <hr>
+        <button onclick="myOutput_displayElementAttributes('a','href');">Show 'a' tags 'href' attribute values to myouput</button>
+        <button onclick="myOutput_displayElementAttributes('p','class');">Show 'p' tags 'class' attribute value to myoutput</button>
+        <hr>
+        <button onclick="myOutput_displayElementsContentByClassName ('herocontent');">Show elements by class name 'herocontent' in myoutput</button>
+        <button onclick="myOutput_displayElementsContentByClassName ('footercontent');">Show elements by class name 'footercontent' in myoutput</button> 
+        <hr>
+        <button onclick="changeStyle ('herocontent','#ff0000');">Change CSS for class name 'herocontent'</button>
+        <button onclick="changeStyle ('footercontent','#ff0000');">Change CSS for class name 'footercontent'</button> 
+        <hr>
+        <button onclick="hide ('herocontent');">Hide stuff with class of 'herocontent'</button>
+        <button onclick="show ('herocontent');">Show stuff with class of 'herocontent'</button>
+        <hr>
+        <button onclick="hide ('footercontent');">Hide stuff with class of 'footercontent'</button> 
+        <button onclick="show ('footercontent');">Show stuff with class of 'footercontent'</button>
+    </div>
+
+    <h2>My Output:</h2>
+    <div id="myoutput">
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script src="js/dom.js"></script>
+</body>
+</html>

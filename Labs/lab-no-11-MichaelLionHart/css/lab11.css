@@ -1,0 +1,52 @@
+/* style.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 960px;
+    border: 2px solid black;
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 14px;
+    color: blue;
+}
+
+label {
+    width: 150px;
+}
+
+span {
+    color: red;
+    margin-left: 20px;
+}
+
+input[type=checkbox] {
+    margin-left: -75px;
+}
+
+input[type=submit] {
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+input[type=radio] {
+    margin-left: 10px;
+}
+
+.nocolor {
+    color: black;
+    margin-left: 5px;
+}
+
+.nocolor2 {
+    color: black;
+    margin-left: 0px;
+}

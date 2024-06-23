@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>My Forth jQuery Page - Filters</title>
+</head>
+<body>
+<!--
+
+    jQuery Filters Fall into 6 Categories
+	
+	Basic Filtering - Provides basic filtering, like getting the first, last, and even and odd numbered items in a returned set
+	
+	Content Filtering - Filters a set of elements based on the content, like whether an element contains a particular string
+	
+	Visibility Filtering - Filters a set of elements using the visibility setting of each element as a test
+	
+	Attribute Filtering - Examines a given attribute on an element to determine whether it should be filtered out
+	
+	Child Filtering - Selects elements based upon their relationship with their parent element
+	
+	Form Filtering - Provides specialized filters that operate on form elements
+	
+	Filters
+	
+	:first - Filter the first selector
+	
+	:last - Filter the last selector 
+	
+	:even - Filter the even selectors
+	
+	:odd - Filter the odd selectors
+	
+	:eq(n) - Filter out elements that are not positioned at the given index
+	
+	:gt(n) - Includes elements that are past the given index
+	
+	:lt(n) - Includes elements that are before the given index
+	
+	:header - filters out all h1,h2....
+	
+	:animated - Selects elements that are being animated
+	
+	:not(selector) - Includes elements that do not match given selector
+
+-->
+
+<h1>This is my forth jQuery page!</h1>
+<p>Please let everybody know</p>
+
+<p>Lets take a look at filtering elements with <strong>jQuery</strong></p>
+
+<ul id="list">
+	<li class="a">Item 1</li>
+	<li class="a">Item 2</li>
+	<li class="b">Item 1</li>
+	<li class="b">Item 2</li>
+</ul>
+
+<div id="content">
+	<p class="a">Whatever narwhal gastropub blog ennui banjo, DIY tattooed.  Jean shorts Etsy tofu blog whatever messenger bag.  Post-ironic tote bag skateboard, pickled viral Etsy tousled kitsch.  Occupy polaroid messenger bag, street art letterpress DIY tofu Echo Park trust fund you probably haven't heard of them mixtape Williamsburg vinyl slow-carb.  Meggings irony PBR&amp;B organic 90's Echo Park.  Cosby sweater Shoreditch biodiesel, iPhone craft beer post-ironic DIY sartorial Thundercats 90's swag.  Polaroid butcher cardigan narwhal, ethnic Cosby sweater Terry Richardson.</p>
+	<p class="a">Echo Park vinyl +1, sriracha vegan put a bird on it hella.  Cred before they sold out iPhone, next level mlkshk Tumblr distillery PBR&amp;B.  Bushwick <strong>roof party XOXO, YOLO synth flannel quinoa aesthetic four loko swag post-ironic next level fixie messenger bag</strong>.  Umami chia before they sold out hashtag Portland, Neutra bicycle rights selvage American Apparel meggings butcher squid.  Ethical viral VHS, try-hard PBR&amp;B gentrify butcher pug bicycle rights put a bird on it next level Portland food truck vegan you probably haven't heard of them.  Pitchfork keytar messenger bag paleo, cliche deep v Shoreditch master cleanse.  Yr stumptown Brooklyn, sartorial Tumblr skateboard gluten-free Neutra banjo wayfarers organic.</p>
+	<p class="b">Fixie small batch authentic freegan.  Dreamcatcher <a href="">drinking vinegar Etsy, umami trust fund photo booth 90's mumblecore</a> kogi post-ironic hoodie.  Single-origin coffee 8-bit pug McSweeney's Shoreditch Intelligentsia.  Banksy Echo Park squid tattooed gluten-free, Portland pour-over organic yr salvia.  Narwhal fingerstache tote bag 8-bit street art, Schlitz whatever <strong>slow-carb twee scenester High Life Vice drinking vinegar Carles.  Terry Richardson asymmetrical bitters irony, vegan synth plaid mlkshk literally cornhole selvage leggings</strong> banjo Shoreditch mumblecore.  Disrupt butcher polaroid swag fashion axe skateboard typewriter, cred mumblecore.</p>
+	<p class="b">Fashion axe flexitarian kogi cliche vinyl, brunch cray umami slow-carb VHS.  Brooklyn bicycle rights cred, Williamsburg Neutra kale chips viral +1.  Locavore butcher plaid, Terry Richardson wayfarers asymmetrical biodiesel messenger bag 3 wolf moon Williamsburg.  Meggings American Apparel Tumblr squid, Cosby sweater leggings church-key.  Disrupt bicycle rights Vice, <strong>Tumblr organic butcher Pinterest retro pug.  Ethnic retro tote bag, vinyl yr biodiesel artisan organic.  Biodiesel vegan </strong>pop-up, Pinterest retro chillwave bicycle rights wolf mixtape.</p>
+</div>
+
+<div id="footer">
+	<p>&copy; 2013 by Bruce Elgort / Clark College</p>
+</div>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		// select the first paragraph
+		// $('p:first').css("border","3px solid red");
+		
+		// select the last paragraph
+		// $('p:last').css("border","3px solid red");
+		
+		// select the even paragraphs
+		// $('p:even').css("border","3px solid red");
+	
+		// select the odd paragraphs
+		// $('p:odd').css("border","3px solid red");
+	
+		// select the paragraph in the first position
+		// $('p:eq(0)').css("border","3px solid red");
+	
+		// select the paragraph in the 3rd position
+		//$('p:eq(3)').css("border","3px solid red");
+		
+		// select the paragraphs greater than the first
+		// $('p:gt(0)').css("border","3px solid red");
+		
+		// select the paragraphs greater than 3
+		// $('p:gt(3)').css("border","3px solid red");
+		
+		// select the paragraphs less than 4
+		//$('p:lt(4)').css("border","3px solid red");
+		
+		// select all header elements
+		// $(':header').css("border","3px solid red");
+		
+		// select elements that are not paragraphs
+		//$(':not(p)').css("border","3px solid red");
+		
+		// select all even elements in the list
+		// $('#list li:even').css("border","3px solid red");
+	
+		// select all odd elements in the list
+		// $('#list li:odd').css("border","3px solid red");
+		
+		// select all elements in the content that are not paragraphs
+		// $('#content :not(p)').css("border","3px solid red");
+	
+		// select all elements in list that are greater than 2
+		// $('#list :gt(2)').css("border","3px solid red");
+		
+		// select all elements in list that are odd
+		// $('#list :odd').css("border","3px solid red");
+	
+		// select all odd elements
+		//  $(':odd').css("border","3px solid red");
+		
+		// select all even elements
+		// $(':even').css("border","3px solid red");
+	
+	});
+</script>
+</body>
+</html>

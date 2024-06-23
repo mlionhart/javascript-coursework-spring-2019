@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Star Rating Using AJAX</title>
+
+	<style>
+		body {
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Rate This Class</h1>
+	<div>
+		<a href="rate.php?rating=5"><img src="images/star.png"><img src="images/star.png"><img
+				src="images/star.png"><img src="images/star.png"><img src="images/star.png"></a>Excellent
+	</div>
+	<div>
+		<a href="rate.php?rating=4"><img src="images/star.png"><img src="images/star.png"><img
+				src="images/star.png"><img src="images/star.png"></a>Good
+	</div>
+	<div>
+		<a href="rate.php?rating=3"><img src="images/star.png"><img src="images/star.png"><img
+				src="images/star.png"></a>Average
+	</div>
+	<div>
+		<a href="rate.php?rating=2"><img src="images/star.png"><img src="images/star.png"></a>Poor
+	</div>
+	<div>
+		<a href="rate.php?rating=1"><img src="images/star.png"></a>Non Existant
+	</div>
+
+	<div id="message"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		// function to handle response from AJAX call
+		function processResponse(data) {
+			$('#message').html(data);
+		}
+
+		$(document).ready(function () {
+			// respond to all clicks on a tags
+			$('a').click(function () {
+				// grab the href attribute of the link clicked on
+				var href = $(this).attr('href');
+				// get everything to the right of the ?
+				var queryString = href.slice(href.indexOf('?') + 1);
+				// send the data to the server and use the processResponse function to handle the data sent back from server
+				$.get('rate.php', queryString, processResponse);
+				// stop the actual link from going anywhere
+				return false;
+			});
+		});
+	</script>
+</body>
+
+</html>

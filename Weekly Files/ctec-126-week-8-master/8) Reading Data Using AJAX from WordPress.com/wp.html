@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WordPress</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>WordPress Blog Viewer</h1>
+	<div>
+		<label for="site">WordPress Site</label>
+		<input type="text" name="site" id="site" value="bruceelgort.com">
+	</div>
+	<div>
+		Display Avatar <input type="radio" name="avatar" value="yes" checked>Yes<input type="radio" name="avatar" value="no">No
+	</div>
+	<div>
+		Display Date<input type="radio" name="date" value="yes" checked>Yes<input type="radio" name="date" value="no">No
+	</div>
+	<div>
+		Display Tags<input type="radio" name="tags" value="yes" checked>Yes<input type="radio" name="tags" value="no">No	
+	</div>
+
+	<button id="doit" disabled>Display Data</button>
+
+	<img src="loading.gif" id="apple">
+	<div id="container"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/wp.js"></script>
+
+</body>
+</html>

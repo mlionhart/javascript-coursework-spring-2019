@@ -1,0 +1,22 @@
+// script.js
+
+function getImage(x) {
+    let location = document.getElementById('imageLocation');
+    location.classList.add('fade');
+    if (x === 'elgort') {
+        location.setAttribute('src', 'img/bruce-elgort.jpg');
+        location.setAttribute('alt', 'Bruce Elgort');
+    } else if (x === 'hughes') {
+        location.setAttribute('src', 'img/bob-hughes.jpg');
+        location.setAttribute('alt', 'Bob Hughes');
+    } else if (x === 'coleman') {
+        location.setAttribute('src', 'img/adam-coleman.jpg');
+        location.setAttribute('alt', 'Adam Coleman');
+    } else if (x === 'knight') {
+        location.setAttribute('src', 'img/bob-knight.jpg');
+        location.setAttribute('alt', 'Bob Knight');
+    } else {
+        location.setAttribute('src', 'img/bob-williamson.jpg');
+        location.setAttribute('alt', 'Bob Williamson');
+    }
+}

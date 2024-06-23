@@ -1,0 +1,12 @@
+/* lab2-problem1.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#output {
+    font-size: 15em;
+    text-align: center;
+}

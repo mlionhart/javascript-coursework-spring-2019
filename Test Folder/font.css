@@ -1,0 +1,28 @@
+body {
+    font-size: large;
+    text-shadow: 2px, 2px, 2px, 2px;
+}
+
+#blue {
+    background-color: dodgerblue;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: greenyellow;
+}
+
+#orange {
+    background-color: orange;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+}

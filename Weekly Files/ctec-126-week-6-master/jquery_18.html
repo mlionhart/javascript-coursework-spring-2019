@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>jQuery Sample 18</title>
+ </head>
+
+<body>
+
+  <h1>
+	  jQuery Animation. How to have animates run after one another.
+  </h1>
+  
+  <h3>Please read the comments in the &lt;script&gt; section before trying to use this page</h3>
+  
+  <img id="photo" src="http://bruceelgort.files.wordpress.com/2013/05/be970a24eec0f284ca25f71844fe36fd.jpg?w=225&h=225" alt="Bruce Elgort" height="" width="" />
+  <p id="caption">That's our teacher</p>
+  
+  <!-- Load jQuery -->   
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <script>
+  
+   $('document').ready(function() { 	   
+   	   // first hide the photo and the caption
+   	   $('#photo').hide();
+   	   $('#caption').hide();
+   	   
+   	   // now show the photo with fadeIn and note the second paramter which is called a "callback function"
+   	   // when the first fadeIn has completed it will then call the callback function
+   	   $('#photo').fadeIn(2000,function(){
+	   	   $('#caption').fadeIn(1000);
+   	   });
+   	     	  		   
+   }); // end ready   
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get JSON data from a PHP script on web server</title>
+</head>
+
+<body>
+    <h1>Getting JSON data from a server side PHP script</h1>
+    <form method="POST" action="" id="simpleform">
+        <p>
+            Contact ID: <input type="text" name="id">
+        </p>
+        <p>
+            <input type="submit" value="Get contact info">
+        </p>
+        <div id="output"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#simpleform').submit(function () {
+                    $('#output').html = "";
+                    var formData = $(this).serialize();
+                    $.getJSON("contacts.php", formData, processData);
+
+                    function processData(data) {
+                        // check to see if error
+                        if (data.errormessage != undefined) {
+                            $('#output').html(data.errormessage);
+                        } else {
+                            innerHTML = "<p>Contact ID: " + data.id + "</p>";
+                            innerHTML += "<p>First Name: " + data.first + "</p>";
+                            innerHTML += "<p>Last Name: " + data.last + "</p>";
+                            $('#output').html(innerHTML);
+                        }
+                    } // end processdata
+                    return false;
+                }); // end submit
+            }); // end ready
+        </script>
+</body>
+
+</html>

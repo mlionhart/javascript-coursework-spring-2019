@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!--
+	CTEC 126 JavaScript
+	Created by Bruce Elgort
+	Copyright 2013
+-->
+	<meta charset="utf-8" />
+	<title>jQuery Example 11</title>
+
+	<style>
+		p#para1 {
+			border: 1px solid #000000;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>More jQuery Examples</h1>
+	<h2>.html(), .text(), .remove(), .after(), .before(), .append(), .prepend(), .replaceWith()</h2>
+	<h3>Please read the comments in the &lt;script&gt; section before trying to use this page</h3>
+
+	<div id="content">
+		<p id="para1">Post-ironic craft beer selvage flannel 90's vero photo booth Odd Future aute cillum. Sriracha
+			laborum 3 wolf moon, Tonx chillwave ethnic skateboard Neutra beard est polaroid consectetur shabby chic
+			Cosby sweater. <strong>Velit consectetur gastropub, squid voluptate delectus PBR&amp;B. Cardigan fashion axe direct trade, disrupt sed McSweeney's Odd Future hashtag Bushwick retro enim freegan craft beer banjo</strong> trust fund. Fashion axe gluten-free Portland, roof party next level bicycle rights kogi aute tofu DIY distillery quinoa. Incididunt pug Etsy gluten-free hella PBR&amp;B. McSweeney's dreamcatcher Terry Richardson, non ugh disrupt incididunt paleo proident assumenda occaecat sed keytar.</p>
+		</p>
+		<p id="nocontent">
+			test
+		</p>
+		<h1>I will be removed!</h1>
+	</div> <!-- end of content div -->
+
+	<!-- Load jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<script>
+		$('document').ready(function () {
+			// NOTE: UNCOMMENT EACH SEGMENT OF CODE ONE AT A TIME
+
+			// Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+			// NOTE: no html tags are included
+			// UNCOMMENT THE LINE BELOW
+			// alert($('p#para1').text());
+
+			// now let's get the HTML
+			// UNCOMMENT THE LINE BELOW
+			// alert($('p#para1').html());
+
+			// We can use text() to set the text of an alement
+			// NOTE: You cannot put html in as a parameter. TEXT ONLY! Try and put tags in and watch what happnes!!
+			// UNCOMMENT THE LINE BELOW
+			// $('p#nocontent').text("Hello World");
+
+			// Now try .html() with tags
+			// UNCOMMENT THE LINE BELOW
+			//$('p#nocontent').html("<h1>Hello World</h1>");
+
+			// The remove() method - What if we want to remove something from the DOM using jQuery?
+			// UNCOMMENT THE LINE BELOW
+			// $('h1').remove();
+
+			// The after() method
+			// UNCOMMENT THE LINE BELOW
+			// $('h1').after('<h2>A heading 2 will get added after h1</h2>');
+
+			// The before() method
+			// UNCOMMENT THE LINE BELOW
+			// $('h1').before('<h2>A heading 2 will get added before h1</h2>');
+
+			// The append() method - adds html to the end of an element
+			// NOTE: Look carefully where the text is being appeneded
+			// UNCOMMENT THE LINE BELOW
+			// $('p#para1').append('This is a test');
+
+			// The prepend() method - adds html directly after the opening tag
+			// UNCOMMENT THE LINE BELOW
+			// $('p#para1').prepend('This is a test. &nbsp;');
+
+			// The replaceWith() method 
+			// UNCOMMENT THE LINE BELOW
+			// $('p#para1').replaceWith('<p>What did the fox say?</p>');
+		}); // end of document.ready
+	</script>
+</body>
+
+</html>

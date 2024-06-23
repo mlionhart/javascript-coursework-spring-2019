@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX Sending Object Data to Server</title>
+
+    <style>
+        body {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#">Send Data</a>
+
+    <div id="message"></div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        // function to handle response from AJAX call
+        function processResponse(data) {
+            $('#message').html(data);
+        }
+
+        $(document).ready(function () {
+            // respond to all clicks on a tags
+            $('a').click(function () {
+                person = { 'age': 51, 'gender': 'male', 'name': 'Brucie' };
+                //Ihttp://ctec.clark.edu/~belgort/formprocessing/processform.php
+                //$.post('sendData.php',person,processResponse);
+                $.post('sendData.php', person, processResponse);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

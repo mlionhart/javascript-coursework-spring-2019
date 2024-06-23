@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stuff.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#" method='POST' id='form'>
+        <!-- <label for="submit">Submit Form</label> -->
+        <label for="ack">I Accept Terms</label>
+        <input type="checkbox" name="ack[]" id="ack">
+        <span id='checkbox'></span>
+        <br><br>
+        <input type="submit" name="submit" id="submit" value="Submit Me!">
+        </fieldset>
+    </form>
+
+    <!-- load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+
+    <script>
+    
+        $('#form').on('submit', function(evt){
+            var ack = $('#ack:checked').val();
+            if (ack === undefined) {
+                evt.preventDefault();
+                $('#checkbox').css('color', 'red');
+                $('#checkbox').html('You must click the box!!');
+            }
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Select2</title>
+	<style>
+		select {
+			width: 500px;
+		}
+	</style>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<label for="select1">Select a State:
+		<select class="js-source-states" id="select1">
+			<optgroup label="Alaskan/Hawaiian Time Zone">
+				<option value="AK">Alaska</option>
+				<option value="HI">Hawaii</option>
+			</optgroup>
+			<optgroup label="Pacific Time Zone">
+				<option value="CA">California</option>
+				<option value="NV">Nevada</option>
+				<option value="OR">Oregon</option>
+				<option value="WA">Washington</option>
+			</optgroup>
+			<optgroup label="Mountain Time Zone">
+				<option value="AZ">Arizona</option>
+				<option value="CO">Colorado</option>
+				<option value="ID">Idaho</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NM">New Mexico</option>
+				<option value="ND">North Dakota</option>
+				<option value="UT">Utah</option>
+				<option value="WY">Wyoming</option>
+			</optgroup>
+			<optgroup label="Central Time Zone">
+				<option value="AL">Alabama</option>
+				<option value="AR">Arkansas</option>
+				<option value="IL">Illinois</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="OK">Oklahoma</option>
+				<option value="SD">South Dakota</option>
+				<option value="TX">Texas</option>
+				<option value="TN">Tennessee</option>
+				<option value="WI">Wisconsin</option>
+			</optgroup>
+			<optgroup label="Eastern Time Zone">
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="IN">Indiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="OH">Ohio</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WV">West Virginia</option>
+			</optgroup>
+		</select>
+	</label>
+
+	<br><br>
+
+	<label for="select2">Select one or more States:
+		<select class="js-example-basic-multiple" multiple="multiple" id="select2">
+			<optgroup label="Alaskan/Hawaiian Time Zone">
+				<option value="AK">Alaska</option>
+				<option value="HI">Hawaii</option>
+			</optgroup>
+			<optgroup label="Pacific Time Zone">
+				<option value="CA">California</option>
+				<option value="NV">Nevada</option>
+				<option value="OR">Oregon</option>
+				<option value="WA">Washington</option>
+			</optgroup>
+			<optgroup label="Mountain Time Zone">
+				<option value="AZ">Arizona</option>
+				<option value="CO">Colorado</option>
+				<option value="ID">Idaho</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NM">New Mexico</option>
+				<option value="ND">North Dakota</option>
+				<option value="UT">Utah</option>
+				<option value="WY">Wyoming</option>
+			</optgroup>
+			<optgroup label="Central Time Zone">
+				<option value="AL">Alabama</option>
+				<option value="AR">Arkansas</option>
+				<option value="IL">Illinois</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="OK">Oklahoma</option>
+				<option value="SD">South Dakota</option>
+				<option value="TX">Texas</option>
+				<option value="TN">Tennessee</option>
+				<option value="WI">Wisconsin</option>
+			</optgroup>
+			<optgroup label="Eastern Time Zone">
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="IN">Indiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="OH">Ohio</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WV">West Virginia</option>
+			</optgroup>
+		</select>
+	</label>
+
+	<br><br>
+
+	<label for="select2">Select (with Placeholder):
+		<select class="js-example-placeholder-single" id="select3">
+			<optgroup label="Alaskan/Hawaiian Time Zone">
+				<option value="AK">Alaska</option>
+				<option value="HI">Hawaii</option>
+			</optgroup>
+			<optgroup label="Pacific Time Zone">
+				<option value="CA">California</option>
+				<option value="NV">Nevada</option>
+				<option value="OR">Oregon</option>
+				<option value="WA">Washington</option>
+			</optgroup>
+			<optgroup label="Mountain Time Zone">
+				<option value="AZ">Arizona</option>
+				<option value="CO">Colorado</option>
+				<option value="ID">Idaho</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NM">New Mexico</option>
+				<option value="ND">North Dakota</option>
+				<option value="UT">Utah</option>
+				<option value="WY">Wyoming</option>
+			</optgroup>
+			<optgroup label="Central Time Zone">
+				<option value="AL">Alabama</option>
+				<option value="AR">Arkansas</option>
+				<option value="IL">Illinois</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="OK">Oklahoma</option>
+				<option value="SD">South Dakota</option>
+				<option value="TX">Texas</option>
+				<option value="TN">Tennessee</option>
+				<option value="WI">Wisconsin</option>
+			</optgroup>
+			<optgroup label="Eastern Time Zone">
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="IN">Indiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="OH">Ohio</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WV">West Virginia</option>
+			</optgroup>
+		</select>
+	</label>
+
+	<br><br>
+
+	<p>Loading data from an array setting intial value</p>
+	<select class="js-example-data-array"></select>
+
+	<br><br>
+
+	<p>Loading data from an array setting intial value</p>
+	<select class="js-example-data-array-selected">
+		<option value="2" selected="selected">duplicate</option>
+	</select>
+
+	<br><br>
+
+	<select class="js-data-example-ajax">
+		<option value="3620194" selected="selected">select2/select2</option>
+	</select>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+	<script>
+
+		function formatRepoSelection(repo) {
+			return repo.full_name || repo.text;
+		}
+
+
+		function formatRepo(repo) {
+			if (repo.loading) return repo.text;
+
+			var markup = "<div class='select2-result-repository clearfix'>" +
+				"<div class='select2-result-repository__avatar'><img src='" + repo.owner.avatar_url + "' /></div>" +
+				"<div class='select2-result-repository__meta'>" +
+				"<div class='select2-result-repository__title'>" + repo.full_name + "</div>";
+
+			if (repo.description) {
+				markup += "<div class='select2-result-repository__description'>" + repo.description + "</div>";
+			}
+
+			markup += "<div class='select2-result-repository__statistics'>" +
+				"<div class='select2-result-repository__forks'><i class='fa fa-flash'></i> " + repo.forks_count + " Forks</div>" +
+				"<div class='select2-result-repository__stargazers'><i class='fa fa-star'></i> " + repo.stargazers_count + " Stars</div>" +
+				"<div class='select2-result-repository__watchers'><i class='fa fa-eye'></i> " + repo.watchers_count + " Watchers</div>" +
+				"</div>" +
+				"</div></div>";
+
+			return markup;
+		}
+
+
+		$(document).ready(function () {
+			$(".js-source-states").select2();
+			$(".js-example-basic-multiple").select2();
+			$(".js-example-placeholder-single").select2({
+				placeholder: "Select a state",
+				allowClear: true
+			});
+		});
+
+		var data = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+
+		$(".js-example-data-array").select2({
+			data: data
+		})
+
+		$(".js-example-data-array-selected").select2({
+			data: data
+		})
+
+		$(".js-data-example-ajax").select2({
+			ajax: {
+				url: "https://api.github.com/search/repositories",
+				dataType: 'json',
+				delay: 250,
+				data: function (params) {
+					return {
+						q: params.term, // search term
+						page: params.page
+					};
+				},
+				processResults: function (data, params) {
+					// parse the results into the format expected by Select2
+					// since we are using custom formatting functions we do not need to
+					// alter the remote JSON data, except to indicate that infinite
+					// scrolling can be used
+					params.page = params.page || 1;
+
+					return {
+						results: data.items,
+						pagination: {
+							more: (params.page * 30) < data.total_count
+						}
+					};
+				},
+				cache: true
+			},
+			escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+			minimumInputLength: 1,
+			templateResult: formatRepo, // omitted for brevity, see the source of this page
+			templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+		});
+
+
+	</script>
+
+
+</body>
+
+</html>

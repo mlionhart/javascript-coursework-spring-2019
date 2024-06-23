@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .show {display: inline-block;}
+        .hide {display: none;}    
+    </style>
+</head>
+<body>
+    
+    <button id="stop" onclick="stop();" class="hide">STOP</button>
+    <button id="start" onclick="start();" class="hide">START</button>
+
+    <script>
+
+        var timer;
+
+        function stop() {
+            clearInterval(timer);
+            document.getElementById('stop').classList.add('hide');
+            console.log('Clearing the interval');
+            document.getElementById('start').classList.add('hide');
+        }
+
+        function start() {
+            var timer = setInterval(doit, 1000);
+            document.getElementById('start').classList.add('hide');
+            document.getElementById('stop').classList.remove('hide');
+        }
+        
+        function doit() {
+            var people = [
+                ['Bruce Elgort', 'img/bruce-elgort.jpg'],
+                ['Bob Hughes', 'img/bob-hughes.jpg'],
+                ['Adam Coleman', 'img/adam-coleman.jpg'],
+                ['Bob Knight', 'img/bob-knight.jpg'],
+                ['Bob Williamson', 'img/bob-williamson.jpg']
+            ];
+        }
+
+        window.onload = function() {
+            timer = setInterval(doit, 1000);
+            document.getElementById('stop').classList.remove('hide');
+        };    
+    </script>
+
+</body>
+</html>

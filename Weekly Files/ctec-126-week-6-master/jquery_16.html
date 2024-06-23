@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>jQuery Sample 16</title>
+ 
+   <style>
+	   #box1 {border:5px solid #000000;
+	   	      background:#dadada;
+	   	      padding:40px;}
+	   	      
+	   #box2 {display:none;}
+   </style>
+</head>
+
+<body>
+
+  <h1>Binding multiple jQuery Events to a single function using the .on()</h1>
+  <h3>Please read the comments in the &lt;script&gt; section before trying to use this page</h3>
+  
+  <div id="box1">
+  		<p>Chillwave Austin incididunt Brooklyn tousled nihil.  Dreamcatcher eu  fixie narwhal, American Apparel bespoke laborum gastropub assumenda mollit  shabby chic.  Readymade deserunt  roof party, banjo ex vero distillery synth adipisicing et Vice letterpress direct trade.  Elit occupy blog sunt tofu +1, Echo Park Portland pug.  Food truck Bushwick fashion axe drinking vinegar small batch, fugiat  roof party Brooklyn.  Selvage whatever sustainable, hoodie aesthetic assumenda incididunt Godard Thundercats biodiesel aute  squid Cosby sweater fugiat.  Pariatur Tonx qui  Bushwick PBR&amp;B, beard you probably haven't heard of them laborum semiotics.</p>
+  </div>
+  
+  <p id="stopit">Turn off click</p>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <script>
+  
+   $('document').ready(function() {
+   	   
+   	   // bind a series of events (all at one time) to an element
+	   $('h1').on({
+		   
+		   // click event
+		   click : function() {
+			   alert('You clicked me');
+		   },
+		   
+		   // mouse over event. NOTE ENTER not HOVER
+		   mouseenter : function() {
+			   console.log('Mouse in...');
+		   },
+		   
+		   // mouse out event. NOTE LEAVE not HOVER
+		   mouseleave : function() {
+			   console.log('Moused out...');
+		   }
+		   
+	   }); // end bind  	   
+   }); // end ready
+    
+   </script>
+  
+</body>
+</html>

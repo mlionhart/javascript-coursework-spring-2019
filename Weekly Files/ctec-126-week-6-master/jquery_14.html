@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>jQuery Example 14</title>
+ 
+   <style>
+	   #box1 {border:5px solid #000000;
+	   	      background:#dadada;
+	   	      padding:40px;}
+	   	      
+	   #box2 {display:none;}
+   </style>
+</head>
+
+<body>
+
+  <h1>Demo of the jQuery show() and hide() methods</h1>
+  <h3>Please read the comments in the &lt;script&gt; section before trying to use this page</h3>
+  
+  <div id="box1">
+  		<p>Chillwave Austin incididunt Brooklyn tousled nihil.  Dreamcatcher eu  fixie narwhal, American Apparel bespoke laborum gastropub assumenda mollit  shabby chic.  Readymade deserunt  roof party, banjo ex vero distillery synth adipisicing et Vice letterpress direct trade.  Elit occupy blog sunt tofu +1, Echo Park Portland pug.  Food truck Bushwick fashion axe drinking vinegar small batch, fugiat  roof party Brooklyn.  Selvage whatever sustainable, hoodie aesthetic assumenda incididunt Godard Thundercats biodiesel aute  squid Cosby sweater fugiat.  Pariatur Tonx qui  Bushwick PBR&amp;B, beard you probably haven't heard of them laborum semiotics.</p>
+  </div>
+  
+  <div id="box2">
+  		<p>Squid nihil craft beer quinoa ex, small batch Etsy do ethnic adipisicing bitters sustainable commodo scenester.  Flexitarian Tumblr gluten-free, hella forage sed wolf.  Sed banh mi vero vegan banjo.  YOLO mlkshk cred Wes Anderson enim.  Marfa Carles ethical iPhone aliqua mollit  four loko, Neutra commodo Blue Bottle cardigan direct trade.  Nulla  ennui proident ut, dolor  meh pug blog Cosby sweater biodiesel Blue Bottle.  Artisan sint  velit  90's organic aliqua hoodie, pariatur vegan PBR&amp;B PBR incididunt.</p>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <script>
+  
+   // show and hide the h1. A click will show it, a double click will hide it.
+   // UNCOMMENT THE BLOCK BELOW 
+   
+   /*
+   $('document').ready(function() {
+   		$('h1').click(function(){
+	   		$('#box2').show();
+   		});
+   		
+   		$('h1').dblclick(function(){
+	   		$('#box2').hide();
+   		});   		
+   });
+   */
+   
+   
+   // now lets look at hovering over an element. Notice how we can call the hover event with two parameters. The first will fire when we hover over the h1 and the second when we unhover from it.
+   // UNCOMMENT THE BLOCK BELOW 
+   
+   /*
+   $('document').ready(function(){
+      $('h1').hover(function(){ 
+ 	   	$('#box2').show(); 
+	   }, // end of first click
+	   function(){
+	    $('#box2').hide(); 
+	  } // end second click  
+      ); // end toggler
+   });
+   */
+   
+   
+   // The code directly above can be rewritten like this:
+   // UNCOMMENT THE BLOCK BELOW 
+
+   /*     
+   $('document').ready(function() {
+   
+	   function showBox2 () {
+		   $('#box2').show();
+	   }
+	   
+	   function hideBox2 () {
+		   $('#box2').hide();	   
+	   }
+	   
+	   $('h1').hover(showBox2,hideBox2);
+	   
+	   });
+    
+   */  
+   </script>
+  
+</body>
+</html>
